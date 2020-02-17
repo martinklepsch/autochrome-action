@@ -1,11 +1,18 @@
-steps:
-- uses: actions/checkout@v1
+name: Upload Test
 
-- run: mkdir diff
+on: [push]
 
-- run: curl https://fazzone.github.io/autochrome.html -o diff/diff.html
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
 
-- uses: actions/upload-artifact@v1
-  with:
-    name: Autochrome Diff
-    path: diff
+    - run: mkdir diff
+
+    - run: curl https://fazzone.github.io/autochrome.html -o diff/diff.html
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: Autochrome Diff
+        path: diff
