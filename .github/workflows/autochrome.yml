@@ -12,6 +12,10 @@ jobs:
 
     - run: curl https://fazzone.github.io/autochrome.html -o diff/diff.html
 
+    - run: echo $GITHUB_EVENT_NAME
+    - run: echo $GITHUB_EVENT_PATH
+    - run: cat $GITHUB_EVENT_PATH
+
     - uses: actions/upload-artifact@v1
       with:
         name: Autochrome Diff
