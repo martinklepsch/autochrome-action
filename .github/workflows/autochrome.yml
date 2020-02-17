@@ -1,0 +1,11 @@
+steps:
+- uses: actions/checkout@v1
+
+- run: mkdir diff
+
+- run: curl https://fazzone.github.io/autochrome.html -o diff/diff.html
+
+- uses: actions/upload-artifact@v1
+  with:
+    name: Autochrome Diff
+    path: diff
