@@ -21,7 +21,7 @@ async function upload (request, response) {
   try {
     const base = 'https://storage.cloud.google.com/autochrome-service.appspot.com'
     const tf = tempWrite.sync(request.files[0].buffer);
-    const loc = "/diffs/" + nanoid() + ".html"
+    const loc = "diffs/" + nanoid() + ".html"
 
     await bucket.upload(tf, {
       destination: loc,
