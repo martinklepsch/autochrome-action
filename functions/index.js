@@ -10,30 +10,25 @@ const storage = new Storage();
 const app = express();
 
 app.use(fileParser({
-  rawBodyOptions: { limit: '1mb', },
+  rawBodyOptions: { limit: '500kb', },
   busboyOptions: { limits: { fields: 1 } }
 }));
 
 admin.initializeApp();
-const bucket = storage.bucket('autochrome-service.appspot.com');
-
-exports.helloWorld = functions.https.onRequest((request, response) => {
- response.send("Hello from Firebase!");
-});
+const bucket = admin.storage().bucket();
 
 async function upload (request, response) {
-  console.log(request.files[0]);
-
   try {
+    const base = 'https://storage.cloud.google.com/autochrome-service.appspot.com'
     const tf = tempWrite.sync(request.files[0].buffer);
-    console.log(tf);
+    const loc = "/diffs/" + nanoid() + ".html"
 
-    await bucket.upload(tf + ".html", {
-      destination: nanoid(),
-      metadata: {}
+    await bucket.upload(tf, {
+      destination: loc,
+      metadata: {contentType: 'text/html'}
     });
 
-    response.send("done");
+    response.send(base + loc);
   } catch (e) {
     console.error(e.message)
     response.status(500).send("error: " + e.message);
@@ -43,4 +38,3 @@ async function upload (request, response) {
 app.post('/upload', upload);
 
 exports.api = functions.https.onRequest(app);
-
