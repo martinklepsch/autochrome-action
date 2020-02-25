@@ -1,14 +1,10 @@
-name: 'clj-kondo checks'
-description: 'Lint your clojure code with clj-kondo in parallel to your builds'
-author: 'DeLaGuardo'
+name: 'Structural Clojure Diffs'
+description: 'Diff your Clojure code with autochrome for amazing structural diffs'
+author: 'martinklepsch'
 branding:
   icon: 'gift'
   color: 'blue'
 inputs:
-  clj-kondo-args:
-    description: 'Arguments to be passed to clj-kondo'
-    required: true
-    default: '--lint src'
   github_token:
     description: 'Github token to report linter results back to check'
     required: true
