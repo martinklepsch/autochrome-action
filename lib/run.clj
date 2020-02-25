@@ -81,8 +81,12 @@
   (doseq [{:strs [url]} (filter #(= autochrome-user-id (get-in % ["user" "id"])) comments)]
     (hc/delete url {:headers headers})))
 
-(println "ARGS" *command-line-args*)
-(autochrome/local-diff "71f74d9" "2708fcc")
+
+(let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
+  (println "ARGS" *command-line-args*)
+  (prn (:out (sh/sh "ls")))
+  (prn (:out (sh/sh "pwd")))
+  (autochrome/local-diff (:base p) (:head p)))
 
 (comment
   (hc/delete "https://api.github.com/repos/martinklepsch/autochrome-action/issues/comments/590096341"
