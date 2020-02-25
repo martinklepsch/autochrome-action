@@ -98,7 +98,7 @@
          (partition 4)
          (map (juxt #(nth % 3) #(nth % 2)))
          (into {})))
-  (with-bindings {#'autochrome-gh/*git-dir* dir}
+  (binding [autochrome-gh/*git-dir* dir]
     (prn (autochrome-gh/ls-tree (:head p)))
     (autochrome/local-diff (:base p) (:head p))))
 
