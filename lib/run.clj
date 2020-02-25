@@ -89,15 +89,15 @@
                               "martinklepsch/autochrome-action")
                           "autochrome-action")]
   (prn "PR" p)
-  (prn (sh/sh "ls" :dir dir))
-  (prn (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir))
-  (prn (->>
-         (-> (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir)
-             :out
-             (clojure.string/split #"\s"))
-         (partition 4)
-         (map (juxt #(nth % 3) #(nth % 2)))
-         (into {})))
+  ; (prn (sh/sh "ls" :dir dir))
+  ; (prn (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir))
+  ; (prn (->>
+  ;        (-> (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir)
+  ;            :out
+  ;            (clojure.string/split #"\s"))
+  ;        (partition 4)
+  ;        (map (juxt #(nth % 3) #(nth % 2)))
+  ;        (into {})))
   (binding [autochrome-gh/*git-dir* dir]
     (prn (autochrome-gh/ls-tree (:head p)))
     (autochrome/local-diff (:base p) (:head p))))
