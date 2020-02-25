@@ -22,7 +22,7 @@
                  {:headers headers})
          :body
          json/read-str
-         #_(map (fn [p]
+         (map (fn [p]
                 {:id (get p "id")
                  :base (get-in p ["base" "sha"])
                  :head (get-in p ["head" "sha"])}))))
@@ -84,6 +84,7 @@
 
 (println "ARGS" *command-line-args*)
 (let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
+  (prn "PR" p)
   (autochrome/local-diff (:base p) (:head p)))
 
 (comment
