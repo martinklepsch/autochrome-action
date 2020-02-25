@@ -100,8 +100,9 @@
   ;        (into {})))
   (binding [autochrome-gh/*git-dir* dir]
     (prn :git-dir autochrome-gh/*git-dir*)
-    (prn (autochrome-gh/ls-tree (:head p)))
-    (autochrome/local-diff (:base p) (:head p))))
+    (let [diff (autochrome/local-diff (:base p) (:head p))]
+      (prn diff)
+      (save-diff! diff))))
 
 (comment
   (hc/delete "https://api.github.com/repos/martinklepsch/autochrome-action/issues/comments/590096341"
