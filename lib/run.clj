@@ -84,14 +84,15 @@
     (hc/delete url {:headers headers})))
 
 (println "ARGS" *command-line-args*)
+(def dir (first *command-line-args*))
 (let [[p] (prs-for-branch (or (System/getenv "GITHUB_REPOSITORY")
                               "martinklepsch/autochrome-action")
                           "autochrome-action")]
   (prn "PR" p)
-  (prn (sh/sh "ls"))
-  (prn (sh/sh "git" "ls-tree" "-r" (:head p)))
+  (prn (sh/sh "ls" :dir dir))
+  (prn (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir))
   (prn (->>
-         (-> (sh/sh "git" "ls-tree" "-r" (:head p))
+         (-> (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir)
              :out
              (clojure.string/split #"\s"))
          (partition 4)

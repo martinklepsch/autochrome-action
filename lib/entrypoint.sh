@@ -3,4 +3,5 @@
 set -e
 
 cd /action/lib
-clojure --report stderr run.clj $1
+
+clojure --report stderr run.clj /github/workspace
