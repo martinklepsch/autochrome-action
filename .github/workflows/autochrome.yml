@@ -1,0 +1,16 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - autochrome-action
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Run Autochrome
+        uses: martinklepsch/autochrome-action@autochrome-action
