@@ -85,6 +85,10 @@
 (println "ARGS" *command-line-args*)
 (let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
   (prn "PR" p)
+  (-> (sh/sh "git" "ls-tree" "-r" (:head p))
+      :out
+      (.split "\n")
+      prn)
   (autochrome/local-diff (:base p) (:head p)))
 
 (comment
@@ -113,6 +117,7 @@
   ;; https://storage.cloud.google.com/autochrome-service.appspot.com/diffs/YFezJQnU0qp860E08lK-I.html
   ;; https://storage.cloud.google.com/autochrome-service.appspot.com//diffs/YFezJQnU0qp860E08lK-I.html
 
+  (autochrome/local-diff "71f74d92c60738db7257230ec7cfb8de681ac6c3" "ffc80d660ec9e63c6b537c98a51f148e76e09628")
   (autochrome/local-diff "71f74d9" "2708fcc")
 
   )
