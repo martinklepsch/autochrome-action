@@ -29,7 +29,7 @@
                  :head (get-in p ["head" "sha"])}))))
 
 (defn save-diff! [diff]
-  (let [f (.getpath (File/createTempFile "autochrome-" ".html"))]
+  (let [f (.getPath (File/createTempFile "autochrome-" ".html"))]
     (spit f diff)
     ;; no multipart stuff in clj-http-lite :/
     (:out (sh/sh "curl" "-F" (str  "data=@" f) diff-upload-endpoint))))
