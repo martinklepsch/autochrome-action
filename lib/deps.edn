@@ -2,4 +2,4 @@
         hato {:mvn/version "0.5.0"}
         org.clojure/data.json {:mvn/version "1.0.0"}
         autochrome {:git/url "https://github.com/martinklepsch/autochrome"
-                    :sha "a2c2b90a46db8b733b54c5b224aec49bb74d893d"}}}
+                    :sha "6ecf608b8df2b7d89b9507a1b77fe8d7fe67558d"}}}
