@@ -82,10 +82,10 @@
     (hc/delete url {:headers headers})))
 
 
+(println "ARGS" *command-line-args*)
+(prn (:out (sh/sh "ls")))
+(prn (:out (sh/sh "pwd")))
 (let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
-  (println "ARGS" *command-line-args*)
-  (prn (:out (sh/sh "ls")))
-  (prn (:out (sh/sh "pwd")))
   (autochrome/local-diff (:base p) (:head p)))
 
 (comment
