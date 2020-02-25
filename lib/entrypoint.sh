@@ -3,4 +3,4 @@
 set -e
 
 cd /action/lib
-clojure run.clj $1
+clojure --report stderr run.clj $1
