@@ -2,6 +2,7 @@
          '[clojure.data.json :as json]
          '[clojure.pprint :as pp]
          '[autochrome.page :as autochrome]
+         '[autochrome.github :as autochrome-gh]
          '[clojure.java.shell :as sh]
          '[clojure.string :as string])
 (import '(java.io File)
@@ -83,11 +84,18 @@
     (hc/delete url {:headers headers})))
 
 (println "ARGS" *command-line-args*)
-(let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
+(let [[p] (prs-for-branch (or (System/getenv "GITHUB_REPOSITORY")
+                              "martinklepsch/autochrome-action")
+                          "autochrome-action")]
   (prn "PR" p)
-  (-> (sh/sh "git" "ls-tree" "-r" (:head p))
-      :out
-      prn)
+  (prn (->>
+         (-> (sh/sh "git" "ls-tree" "-r" (:head p))
+             :out
+             (clojure.string/split #"\s"))
+         (partition 4)
+         (map (juxt #(nth % 3) #(nth % 2)))
+         (into {})))
+  (prn (autochrome-gh/ls-tree (:head p)))
   (autochrome/local-diff (:base p) (:head p)))
 
 (comment
@@ -116,6 +124,8 @@
   ;; https://storage.cloud.google.com/autochrome-service.appspot.com/diffs/YFezJQnU0qp860E08lK-I.html
   ;; https://storage.cloud.google.com/autochrome-service.appspot.com//diffs/YFezJQnU0qp860E08lK-I.html
 
+  (require 'autochrome.github)
+  (autochrome.github/ls-tree "ffc80d660ec9e63c6b537c98a51f148e76e09628")
   (autochrome/local-diff "71f74d92c60738db7257230ec7cfb8de681ac6c3" "ffc80d660ec9e63c6b537c98a51f148e76e09628")
   (autochrome/local-diff "71f74d9" "2708fcc")
 
