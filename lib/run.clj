@@ -99,6 +99,7 @@
   ;        (map (juxt #(nth % 3) #(nth % 2)))
   ;        (into {})))
   (binding [autochrome-gh/*git-dir* dir]
+    (prn :git-dir autochrome-gh/*git-dir*)
     (prn (autochrome-gh/ls-tree (:head p)))
     (autochrome/local-diff (:base p) (:head p))))
 
