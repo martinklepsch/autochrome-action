@@ -88,13 +88,8 @@
                               "martinklepsch/autochrome-action")
                           "autochrome-action")]
   (prn "PR" p)
-  (prn (->>
-         (-> (sh/sh "git" "ls-tree" "-r" (:head p))
-             :out
-             (clojure.string/split #"\s"))
-         (partition 4)
-         #_(map (juxt #(nth % 3) #(nth % 2)))
-         #_(into {})))
+  (prn (sh/sh "ls"))
+  (prn (sh/sh "git" "ls-tree" "-r" (:head p)))
   (prn (->>
          (-> (sh/sh "git" "ls-tree" "-r" (:head p))
              :out
