@@ -1,7 +1,8 @@
-FROM borkdude/clj-kondo AS binary
+FROM clojure:openjdk-11-tools-deps
 
-FROM node:10-slim
+COPY /lib/deps.edn /action/lib/deps.edn
+RUN cd /action/lib; clojure -Spath
 
-COPY lib /action/lib
-COPY --from=binary /usr/local/bin/clj-kondo /usr/local/bin/clj-kondo
+COPY /lib /action/lib
+
 ENTRYPOINT ["/action/lib/entrypoint.sh"]

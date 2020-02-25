@@ -2,4 +2,5 @@
 
 set -e
 
-node /action/lib/run.js $1
+cd /action/lib
+clojure run.clj $1
