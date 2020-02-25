@@ -87,7 +87,6 @@
   (prn "PR" p)
   (-> (sh/sh "git" "ls-tree" "-r" (:head p))
       :out
-      (.split "\n")
       prn)
   (autochrome/local-diff (:base p) (:head p)))
 
