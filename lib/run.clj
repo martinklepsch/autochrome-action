@@ -81,11 +81,9 @@
   (doseq [{:strs [url]} (filter #(= autochrome-user-id (get-in % ["user" "id"])) comments)]
     (hc/delete url {:headers headers})))
 
-
 (println "ARGS" *command-line-args*)
-(prn (:out (sh/sh "ls")))
-(prn (:out (sh/sh "pwd")))
-(prn (System/getenv "GITHUB_TOKEN"))
+(prn :token (System/getenv "GITHUB_TOKEN"))
+(prn :env (System/getenv))
 (let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
   (autochrome/local-diff (:base p) (:head p)))
 
