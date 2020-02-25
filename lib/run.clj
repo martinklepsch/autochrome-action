@@ -101,8 +101,7 @@
   (binding [autochrome-gh/*git-dir* dir]
     (prn :git-dir autochrome-gh/*git-dir*)
     (let [diff (autochrome/local-diff (:base p) (:head p))]
-      (prn diff)
-      (save-diff! diff))))
+      (prn :diff-saved (save-diff! diff)))))
 
 (comment
   (hc/delete "https://api.github.com/repos/martinklepsch/autochrome-action/issues/comments/590096341"
