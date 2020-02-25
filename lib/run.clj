@@ -85,6 +85,7 @@
 (println "ARGS" *command-line-args*)
 (prn (:out (sh/sh "ls")))
 (prn (:out (sh/sh "pwd")))
+(prn (System/getenv "GITHUB_TOKEN"))
 (let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
   (autochrome/local-diff (:base p) (:head p)))
 
