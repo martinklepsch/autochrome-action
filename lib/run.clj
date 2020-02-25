@@ -13,7 +13,8 @@
 (def headers
   {"content-type" "application/json"
    "accept" "application/vnd.github.antiope-preview+json"
-   "authorization" (str "Bearer " (System/getenv "GITHUB_TOKEN"))
+   "authorization" (str "Bearer " (or (System/getenv "INPUT_GITHUB_TOKEN")
+                                      (System/getenv "GITHUB_TOKEN")))
    "user-agent" "clojure-autochrome-diff"})
 
 (defn prs-for-branch [repo branch-name]
@@ -82,8 +83,6 @@
     (hc/delete url {:headers headers})))
 
 (println "ARGS" *command-line-args*)
-(prn :token (System/getenv "GITHUB_TOKEN"))
-(prn :env (System/getenv))
 (let [[p] (prs-for-branch (System/getenv "GITHUB_REPOSITORY") "autochrome-action")]
   (autochrome/local-diff (:base p) (:head p)))
 
