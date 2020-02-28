@@ -101,6 +101,7 @@
   (binding [autochrome-gh/*git-dir* dir]
     (prn :git-dir autochrome-gh/*git-dir*)
     (let [diff (autochrome/local-diff (:base p) (:head p))]
+      (prn :diff diff)
       (prn :diff-saved (save-diff! diff)))))
 
 (comment
@@ -127,7 +128,7 @@
   (spit f "testing")
 
   ;; https://storage.cloud.google.com/autochrome-service.appspot.com/diffs/YFezJQnU0qp860E08lK-I.html
-  ;; https://storage.cloud.google.com/autochrome-service.appspot.com//diffs/YFezJQnU0qp860E08lK-I.html
+  ;; https://storage.cloud.google.com/autochrome-service.appspot.com/diffs/MFs_yL7E1hQxcZr5T8_aD.html
 
   (require 'autochrome.github)
   (autochrome.github/ls-tree "ffc80d660ec9e63c6b537c98a51f148e76e09628")
