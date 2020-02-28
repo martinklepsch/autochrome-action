@@ -19,7 +19,6 @@ const bucket = admin.storage().bucket();
 
 async function upload (request, response) {
   try {
-    const base = 'https://storage.cloud.google.com/autochrome-service.appspot.com'
     const tf = tempWrite.sync(request.files[0].buffer);
     const loc = "diffs/" + nanoid() + ".html"
 
@@ -28,6 +27,7 @@ async function upload (request, response) {
       metadata: {contentType: 'text/html'}
     });
 
+    const base = 'https://storage.cloud.google.com/autochrome-service.appspot.com/'
     response.send(base + loc);
   } catch (e) {
     console.error(e.message)
