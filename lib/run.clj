@@ -89,7 +89,7 @@
                               "martinklepsch/autochrome-action")
                           "autochrome-action")]
   (prn "PR" p)
-  ; (prn (sh/sh "ls" :dir dir))
+  (prn (sh/sh "ls" :dir dir))
   ; (prn (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir))
   ; (prn (->>
   ;        (-> (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir)
