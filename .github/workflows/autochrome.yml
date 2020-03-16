@@ -6,7 +6,7 @@ on:
       - autochrome-action
 
 jobs:
-  deploy:
+  autochrome:
     name: Run Autochrome
     runs-on: ubuntu-latest
     steps:
