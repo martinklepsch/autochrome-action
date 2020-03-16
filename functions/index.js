@@ -27,8 +27,8 @@ async function upload (request, response) {
       metadata: {contentType: 'text/html'}
     });
 
-    const base = 'https://storage.cloud.google.com/autochrome-service.appspot.com/'
-    response.send(base + loc);
+    const url = await storage.child(loc).getDownloadURL();
+    response.send(url)
   } catch (e) {
     console.error(e.message)
     response.status(500).send("error: " + e.message);
