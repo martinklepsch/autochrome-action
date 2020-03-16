@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html><head><title>Autochrome - Structural diffs for Clojure source code</title><style>body {
+  background: #000000;
+  font-family: "Iosevka Term", "Fira Code", Inconsolata, Menlo, Monaco, Consolas, monospace;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+code, pre {
+  line-height: 1.24;
+  font-family: "Iosevka Term", "Fira Code", Inconsolata, Menlo, Monaco, Consolas, monospace;
+  word-break: normal;
+  white-space: pre;
+  word-spacing: normal;
+  word-wrap: normal;
+  background: #000000;
+  color: #ffffff;
+  hyphens: none;
+}
+
+code, a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: inherit;
+}
+
+pre {
+  margin: 0px;
+  overflow: auto;
+  border-radius: 0.3em;
+  font-weight: normal;
+  overflow-y: hidden;
+}
+
+.gutter {
+  text-align: right;
+  padding-right: 4px;
+  padding-left: 2px;
+}
+
+.code-card {
+  margin-buttom: 16px;
+  padding: 6px 6px 0px 6px;
+  color: #ae81ff;
+  font-weight: bold;
+}
+
+.code-card-heading {
+  background: linear-gradient(#632697, #000);
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filename-heading {
+  background: linear-gradient(#632697, #000);
+  font-size: 22px;
+  color: white;
+}
+
+.spacer {
+  margin-bottom: 30px;
+}
+
+.code-card-heading-extra {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.usages {
+  font-size: 16px;
+  margin: auto;
+}
+
+.top-comment {
+  margin-bottom: 17px;
+}
+
+.ns-ref {
+  color: #f0c674;
+}
+
+.keyword {
+  color: #8abeb7;
+}
+
+.var-ref {
+  color: #81a2be;
+}
+
+.clojure-core {
+  font-weight: bolder;
+  color: #81a2be;
+}
+
+.macro {
+  color: #b294bb;
+}
+
+.punctuation {
+  color: #a6a6a0;
+}
+
+.ns-ref {
+  color: #f0c674;
+}
+
+.string {
+  color: #b5bd68;
+}
+
+.keyword {
+  color: #70c0b1;
+}
+
+.meta > .keyword {
+  color: #ea731c;
+}
+
+.java-class {
+  color: #de9f25;
+}
+
+.punctuation {
+  color: #a6a6a0;
+}
+
+.highlight {
+  background-color: #5d007a;
+}
+
+.unparsed {
+  background-color: #ff0000;
+}
+
+.added {
+  background-color: #225d2d;
+}
+
+.deleted {
+  background-color: rgba(200, 38, 38, 0.81);
+}
+
+.deleted .deleted {
+  background-color: unset;
+}
+
+.added .added {
+  background-color: unset;
+}
+
+.first-seen {
+  text-decoration: underline;
+}
+
+.comment {
+  color: #969896;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.diffpane {
+  width: 50%;
+}
+
+.shead {
+  background-color: #1224b1;
+  border-radius: 10px;
+}
+
+.thead {
+  background-color: #5d007a;
+  border-radius: 10px;
+}</style><style>body {
+  color: white;
+}
+
+p, .caption {
+  font-family: sans-serif;
+  text-align: left;
+  font-size: 18px;
+}
+
+.caption {
+  font-size: 14px;
+}
+
+p {
+  text-indent: 2em;
+}
+
+.diffpane {
+  width: unset;
+}
+
+.text {
+  font-family: sans-serif;
+}
+
+.textcontainer {
+  width: 57%;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.sectiontitle {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.insetcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.insetcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.logside {
+  width: 50%;
+}
+
+.inset {
+  border: 2px solid;
+  border-color: #969896;
+  padding: 10px;
+  display: flex;
+}
+
+.examplesection {
+  font-size: 16px;
+  width: 70%;
+  margin: auto;
+}
+
+.fixed {
+  font-family: monospace;
+  background-color: #111;
+}</style></head><body><div data-reactroot="" data-react-checksum="-23302278"><div class="filename-heading"><div class="title">Autochrome - Structural diffs for Clojure source code</div></div><div class="textcontainer" style="margin:auto;"><div style="margin-top:35px;"><div class="insetcenter"><div class="inset"><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="deleted"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span class="added"><span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span></span><span class="added">)</span></span>)</pre></div></div></div></div></div></div></div><p><div><div class="sectiontitle">Abstract</div><p><a href="https://github.com/ladderlife/autochrome">Autochrome (repo here)</a> uses a full parse to highlight and structurally diff Clojure source code.  It aims to make the experience of reviewing Clojure code just as nice as writing it.  It takes the form of a command-line tool which generates diffs as static HTML: </p><div class="insetcenter"><div class="inset"><pre>$ lein run <i>owner</i> <i>repo</i> <i>num</i> -o diff.html<span class="comment">        # write a diff for a github pull request</span>
+$ lein run --token user:123abc <i>owner</i> <i>repo</i> <i>num</i><span class="comment"> # use supplied auth token for github api</span>
+$ lein run --git-dir <i>/your/repo/ </i><i>old-tree</i> <i>new-tree</i><span class="comment">  # like git diff, using specified repo</span>
+$ lein run --open ...<span class="comment">                         # try to open the diff in a browser</span></pre></div></div><p>If generated from GitHub, the line numbers in Clojure diffs link back to the PR.  Bold symbols link to documentation.</p></div><div><div class="sectiontitle">Features</div><p><ul class="text"><li style="margin-bottom:30px;">Scope-aware highlighting (no regular expressions):<div class="insetcontainer"><div class="inset"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="more hacks1"><div>1</div></a><a href="more hacks2"><div>2</div></a><a href="more hacks3"><div>3</div></a><a href="more hacks4"><div>4</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/let"><span class="macro clojure-core">let</span></a> [keyword <span class="keyword">:hello/world</span>
+      name (<a href="https://clojuredocs.org/clojure.core/name"><span class="clojure-core">name</span></a> keyword)
+      [a b <span class="keyword">:as</span> vec] (<a href="https://clojuredocs.org/clojure.core/map"><span class="clojure-core">map</span></a> <a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> [1 2 3])]
+  (<a href="https://clojuredocs.org/clojure.core/str"><span class="clojure-core">str</span></a> (<a href="https://clojuredocs.org/clojure.core/namespace"><span class="clojure-core">namespace</span></a> keyword) name))</pre></div></div></div><div style="width:100%;"></div></div></li><li style="margin-bottom:30px;">Structural diff which can cope with wrapping/stripping parens:<div class="insetcontainer"><div class="inset"><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a><a href="hahaha6"><div>6</div></a><a href="hahaha7"><div>7</div></a></code></pre><div style="width:1px;"></div><pre class="source">{<span class="keyword">:a</span> <span class="keyword">:really</span>
+ <span class="keyword">:big</span> <span class="keyword">:thing</span>
+ <span class="deleted"><span class="keyword">:these</span></span> <span class="deleted"><span class="keyword">:entries</span></span>
+ <span class="keyword">:which</span> <span class="keyword">:is</span>
+ <span class="deleted"><span class="keyword">:were</span></span> <span class="deleted"><span class="keyword">:removed</span></span>
+ <span class="keyword">:very</span> <span class="keyword">:annoying</span>
+ <span class="keyword">:to</span> <span class="keyword">:read</span>}</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a><a href="hahaha6"><div>6</div></a><a href="hahaha7"><div>7</div></a><a href="hahaha8"><div>8</div></a></code></pre><div style="width:1px;"></div><pre class="source parens-added"><span><span class="added">(</span><span class="added">keys</span>
+   <span><span class="added">(</span><span class="added">merge</span>
+    <span>{<span class="keyword">:a</span> <span class="keyword">:really</span>
+     <span class="keyword">:big</span> <span class="keyword">:thing</span>
+     <span class="keyword">:which</span> <span class="keyword">:is</span>
+     <span class="keyword">:very</span> <span class="keyword">:annoying</span>
+     <span class="keyword">:to</span> <span class="keyword">:read</span>}</span>
+    <span class="added"><span>{<span class="keyword">:more</span> <span class="keyword">:stuff</span>}</span></span><span class="added">)</span></span><span class="added">)</span></span></pre></div></div></div></div></div><div style="width:100%;"></div></div></li><li style="margin-bottom:30px;">Naturally, whitespace is ignored completely: (h/t <a href="http://blog.klipse.tech/lambda/2016/08/07/pure-y-combinator-clojure.html">@viebel</a>)<div class="insetcontainer"><div class="inset"><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojure.org/reference/special_forms#def"><span class="macro clojure-core">def</span></a> Y(<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a>[f]((<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a>[x](x,x))
+(<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a>[x](f(<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a>[y]((x,x),y)))))))</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojure.org/reference/special_forms#def"><span class="macro clojure-core">def</span></a> Y
+  (<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a> [f]
+    ((<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a> [x] (x x))
+     (<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a> [x] (f (<a href="https://clojure.org/reference/special_forms#fn"><span class="macro clojure-core">fn</span></a> [y] ((x x) y)))))))</pre></div></div></div></div></div><div style="width:100%;"></div></div></li></ul></p></div><div><div class="sectiontitle">Misfeatures</div><p><ul class="text"><li>Symbols can only have one annotation.  (diff color overwrites highlight)</li><li>Terrible for viewing non-clojure diffs.  </li><li>Difficult to port to ClojureScript.  </li><li>Uses its own custom clojure parser.</li><li>Occasionally gets strange ideas.</li></ul></p></div><div><div class="sectiontitle">How it works</div><p>Structural diffing is something I always wanted for Clojure.  When I saw <a href="http://thume.ca/2017/06/17/tree-diffing/">Tristan Hume&#x27;s article about tree diffing</a>, I was inspired to give it a shot myself using the same A* pathfinding technique he described.  I ended up ditching A* for plain old Dijkstra&#x27;s algorithm however - <a href="#alignment">more on that later</a>.  Either way, in order to frame tree diffing as a pathfinding problem, you need to extend the concepts of location, cost, and adjacency to tree diffs.  Location is clearly needed to know where you are, but in addition locations need to be comparable, so you know not to bother when you already have a better path to the same place.  Cost is what makes some paths preferred over others.  For pathfinding on a road network, this would be the total distance traveled along the roads used. Adjacency is what states are reachable from a particular state.  For roads you might say that intersections are the nodes and adjacency means there is a road connecting them.  In autochrome:<ul class="text"><li>Location is a pair of pointers into the source and target lists, plus the stack of previous locations.  Intuitively, the pointers represent a pair of &#x27;cursors&#x27; over the tree structure.  Without the stack of previous locations, comparison would break, since all locations at the end of two lists would be indistinguishable from the goal (the end of both root lists)</li><li>Cost is the total size of all subtrees added and deleted, plus the number of subtree added and deleted.  Subtree size is 1 for empty collections, character count for text nodes, and sum size of children for branch nodes.  The number of subtrees changed is included in the cost so that the algorithm prefers deleting/adding entirelists, rather than all their elements (since they have the same cost otherwise).</li><li>Adjacency is a bit complicated:<ul><li>When the source and target cursors are over identical subtrees, we always advance both cursors.</li><li>When the source cursor is not at the end of its list, we may advance it while keeping the same target cursor.  This corresponds to deleting a subtree from the source list.</li><li>Likewise for the target cursor: we advance it and keep the source cursor, corresponding to a subtree addition.</li><li>When both cursors are over matching collection types, we can move both cursors into the lists.  We also need to push the next location onto the stack.</li><li>When both cursors are nil, it means we have reached the end of both lists, and we need to pop the next location in the parent sequences off the stack.</li></ul><p>This is the basic version of adjacency that I started with.  However, when implemented this way, the algorithm cannot match subtrees at different levels of nesting, since the cursors always move up or down together.  To handle changes in nesting, the cursors need to be allowed to move up and down independently, like they are allowed to do within lists.  This means that instead of one stack of pairs of pointers, we need a pair of stacks of pointers, one per cursor.  Then we need to add some state transitions: </p><ul><li>When only the source cursor is nil, pop the source stack only.</li><li>Likewise for target cursor.</li><li>When the source cursor is over a branch node, move it to the first child, and push the next position on the source stack.</li><li>Likewise for target cursor.</li></ul><p>Since there are quite a lot of branch nodes, this creates a ton of extra states for the algorithm to explore.  So although it seems like the steps which move both cursors up/down would obsolete, since they can be replicated with two single-cursor movements, they are needed so that performance is not terrible on mostly identical subtrees (ie the common case).  It is also helpful to make single-cursor movement cost more than two-cursor movement, so that we only try a single-cursor move after matched movement fails.  The extra cost accounts for the fact that single-cursor movement corresponds to adding or removing a set of parens.</p></li></ul></p></div></p><div><div class="sectiontitle">Worked Example</div><p>I don&#x27;t know about you, but I&#x27;m not the type who can absorb the essence of a complicated algorithm from a wall of text as seen above.  So let&#x27;s look at a detailed log of the states we popped from our priority queue while generating the example diff at the top of this page.  The states are numbered in the order in which they were processed.  We will look at the goal state and each of its predecessors,  starting from the initial state.</p></div></div><div class="examplesection"><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="1722246756"><div class="filename-heading"><span style="font-size:16px;">#000  -0,+0 cost 0</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source shead"><span class="shead"><span>(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  <span>[x]</span>
+  <span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span>
+  <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+   <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>)</span></span></pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source thead"><span class="thead"><span>(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  <span>[x]</span>
+  <span>(<a href="https://clojuredocs.org/clojure.core/-&gt;"><span class="macro clojure-core">-&gt;</span></a> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span>)</span>)</span></span></pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">The source cursor is blue, and the target cursor is purple.  As you can see, we start with each cursor over its entire subtree.  </div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="1551939514"><div class="filename-heading"><span style="font-size:16px;">#001  -0,+0 cost 1</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<span class="shead">defn</span> example
+  [x]
+  (<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<span class="thead">defn</span> example
+  [x]
+  (<a href="https://clojuredocs.org/clojure.core/-&gt;"><span class="macro clojure-core">-&gt;</span></a> {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+       <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)}
+      (<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> (<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x))))</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">After we enter the main loop and pop the start state, we can start exploring.  In this state we have matched the parentheses and descended into the defn body. Going into lists has cost 1, so that deleting an entire list is cheaper than deleting each of its elements.</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="1456893514"><div class="filename-heading"><span style="font-size:16px;">#002  -0,+0 cost 1</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> <span class="shead">example</span>
+  [x]
+  (<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> <span class="thead">example</span>
+  [x]
+  (<a href="https://clojuredocs.org/clojure.core/-&gt;"><span class="macro clojure-core">-&gt;</span></a> {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+       <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)}
+      (<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> (<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x))))</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">We matched <span class="fixed">defn</span> with <span class="fixed">defn</span> and advanced both cursors. Now we can now match <span class="fixed">example</span> with <span class="fixed">example</span>.</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="66261497"><div class="filename-heading"><span style="font-size:16px;">#003  -0,+0 cost 1</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  <span class="shead"><span>[x]</span></span>
+  (<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  <span class="thead"><span>[x]</span></span>
+  (<a href="https://clojuredocs.org/clojure.core/-&gt;"><span class="macro clojure-core">-&gt;</span></a> {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+       <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)}
+      (<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> (<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x))))</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">Since matching is done with subtree hashes, we can match <span class="fixed">[x]</span> without going into the vector at all.</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="145304187"><div class="filename-heading"><span style="font-size:16px;">#004  -0,+0 cost 1</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="shead"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="thead"><span>(<a href="https://clojuredocs.org/clojure.core/-&gt;"><span class="macro clojure-core">-&gt;</span></a> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span>)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">Now we have our first mismatch.  We have a few options here:<ol><li>Delete source (blue) subtree</li><li>Add target (purple) subtree</li><li>Go into both subtrees</li><li>Go into blue subtree only</li><li>Go into purple subtree only</li></ol></div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="1237877549"><div class="filename-heading"><span style="font-size:16px;">#008  -0,+1 cost 3</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="shead"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="thead">-&gt;</span> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">We explore all of those options, but eventually we choose the last.  Since we moved the target cursor into a list while the source cursor stayed put, it follows that if we finish diffing, the parens which create that extra list must have been added, so we can go ahead and paint them green, and add 2 to the cost.</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="1302710268"><div class="filename-heading"><span style="font-size:16px;">#011  -0,+2 cost 6</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="shead"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span class="thead"><span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span></span>
+      <span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">Add the <span class="fixed">-&gt;</span>.  It has size 2, but the new cost is 6.  This is because each addition/deletion costs 1 extra point, so that minimal diffs are cheaper than equivalent diffs with more changes. </div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="1862396206"><div class="filename-heading"><span style="font-size:16px;">#060  -1,+2 cost 22</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="deleted"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  <span class="shead"><span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+   <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span></span>)</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span class="thead"><span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span></span>
+      <span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption"> Delete <span class="fixed">(println &quot;hello&quot;)</span>.  Note that this is state #60 while the previous state was #11 - we explored a whole bunch of dead-end states in between.  This is because the deletion has a relatively high cost, so Dijkstra prefers to do low- or no-cost movement before eventually getting around to this state.</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="751739976"><div class="filename-heading"><span style="font-size:16px;">#063  -1,+2 cost 22 (nil S)</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="deleted"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span class="thead"><span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span></span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">Match the identical maps and advance each cursor.  Since the map was the last element in the source defn body, the source cursor has reached the end of its list, so there is nothing to highlight in blue and it says <span class="fixed">(nil S)</span> in the header.</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="1009338182"><div class="filename-heading"><span style="font-size:16px;">#065  -1,+2 cost 22 (nil S)</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="deleted"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span class="thead"><span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span></span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">It may look like nothing happened, but we popped out of the left subtree only here.  This is an example of how movement operations get processed before any additions/deletions.  It&#x27;s completely free to explore here, so we might as well!</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="127135225"><div class="filename-heading"><span style="font-size:16px;">#197  -1,+3 cost 37 (nil S) (nil T)</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="deleted"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span class="added"><span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span></span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">Add <span class="fixed">(assoc :twice (+ x x))</span>.  Another costly change means another big gap in state number.  That was the last element in the target sequence, so now we have <span class="fixed">(nil S)</span> and <span class="fixed">(nil T)</span>.  </div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="724333935"><div class="filename-heading"><span style="font-size:16px;">#200  -1,+3 cost 37 (nil S) (nil T)</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="deleted"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span class="added"><span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span></span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">Pop out of the <span class="fixed">(-&gt; ...)</span>.</div></div></div></div><div style="margin-bottom:40px;" class="insetcontainer"><div style="min-width:fit-content;min-width:-moz-fit-content;" class="inset"><div id="601824320"><div class="filename-heading"><span style="font-size:16px;">#203 goal!  -1,+3 cost 37 (nil S) (nil T)</span></div><div style="display:flex;flex-direction:row;"><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span class="deleted"><span>(<a href="https://clojuredocs.org/clojure.core/println"><span class="clojure-core">println</span></a> <span class="string">&quot;hello!&quot;</span>)</span></span>
+  {<span class="keyword">:more</span> (<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)
+   <span class="keyword">:less</span> (<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)})</pre></div></div></div><div class="diffpane"><div class="code-card"><div class="code-card-heading"><div class="code-card-heading-extra"></div></div><div class="container"><pre class="gutter"><code class="punctuation"><a href="hahaha1"><div>1</div></a><a href="hahaha2"><div>2</div></a><a href="hahaha3"><div>3</div></a><a href="hahaha4"><div>4</div></a><a href="hahaha5"><div>5</div></a></code></pre><div style="width:1px;"></div><pre class="source">(<a href="https://clojuredocs.org/clojure.core/defn"><span class="macro clojure-core">defn</span></a> example
+  [x]
+  <span><span class="added">(</span><span class="added">-&gt;</span> <span>{<span class="keyword">:more</span> <span>(<a href="https://clojuredocs.org/clojure.core/inc"><span class="clojure-core">inc</span></a> x)</span>
+       <span class="keyword">:less</span> <span>(<a href="https://clojuredocs.org/clojure.core/dec"><span class="clojure-core">dec</span></a> x)</span>}</span>
+      <span class="added"><span>(<a href="https://clojuredocs.org/clojure.core/assoc"><span class="clojure-core">assoc</span></a> <span class="keyword">:twice</span> <span>(<a href="https://clojuredocs.org/clojure.core/+"><span class="clojure-core">+</span></a> x x)</span>)</span></span><span class="added">)</span></span>)</pre></div></div></div></div></div></div><div></div><div class="logside"><div style="display:flex;height:100%;flex-direction:column;justify-content:center;"><div></div><div class="caption">Pop out of the target defn body.  Now that we have popped all the way out of both forms, both stacks are empty and there are no more forms to diff,  so we are done!</div></div></div></div></div><div class="textcontainer" style="margin:auto;" id="alignment"><div><div class="sectiontitle">Alignment</div><p>I had originally implemented the diff algorithm as A*, which was a lot better at finding diffs with fewer explored states.  What made me decide to switch to plain Dijkstra&#x27;s algorithm was the problem of alignment.  When multiple forms in a file are changed, inserted, renamed or deleted, how do you figure out which pairs to diff?A* works great when you know both the source and the target forms, but this proved difficult in practice.  </p><p>My first idea was to simply diff the entire source file with the entire target file, basically treating each file as if it had [] surrounding the entire thing.  This led to a lot of weird diffs; for example when you deleted something and inserted something else in its place, the diff would show how to transform the deleted thing into the new thing, which was confusing.  Top-level forms are the basic unit of clojure code, so diffs which span them are unnatural and hard to read.  When the change-of-nesting support was implemented, things really got out of hand.</p><p>Something had to be done.  My next idea was to basically hack it by trying to match forms by their top-level text, for example &#x27;defn somefn&#x27; or &#x27;defmethod foo :dval&#x27;.  This has a lot of obvious problems, including docstrings, but especially renames.  It worked better than I expected but the problem was still not solved.</p><p>The solution I came up with is to diff each target form in the old file against <i>all</i> forms in the new file.  This is done by adding N start states to the priority queue, instead of only one, where N is the number of candidate target forms. Since A* really only makes sense in the context of single-source shortest paths, I decided to just switch to Dijkstra&#x27;s algorithm,  which can deal just fine with multiple origins.  Since the diffs are processed in order of increasing cost, we know that the first complete diff we see will be the lowest-cost-possible diff of the source form with any of the target forms.  So we trade away single-target diff performance, but in return we get the guaranteed optimal solution to the alignment problem. </p><p>Doing diffs this way is technically quadratic, since in the worst case it requires every source form to be diffed against every target form, but there are a couple tricks that can be used to make it more palatable.  Most of the time, the majority of the forms in a file will be unchanged, so we can just hash everything first and match those right away.  That means the runtime is only quadratic with respect to the number of changed forms, which is better.  Second, each target form can only be matched to one source form, so we if we have to diff the first source against N targets, we only need to diff the second against N-1, and so on.  Still quadratic but oh well, parsing is usually slower anyway.  Finally, in each list of candidate targets we always include nil, representing the cost of deleting the entire source form.  This means no states more expensive than that are considered, which kind of controls the number of states we need to explore.</p><p>There are a couple of slow cases, but for the most part I think the gains are worth the switch to Dijkstra.  Probably the slowest type of change to diff is splitting a very large form into two or more smaller forms, since we will spend a huge amount of time trying to figure out which smaller form is most similar to the original large form.  For example, If you split a 100-line function into two pieces and also make a bunch of changes, it might take like 30 seconds to diff.  That&#x27;s not great, but you&#x27;ll probably spend more than 30 seconds looking at a diff like that anyway.</p></div></div></div></body></html>

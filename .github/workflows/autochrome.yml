@@ -1,0 +1,20 @@
+name: Autochrome
+
+on:
+  push:
+    branches:
+      - autochrome-action
+
+jobs:
+  autochrome:
+    name: Run Autochrome
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      - name: Run Autochrome
+        uses: martinklepsch/autochrome-action@autochrome-action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

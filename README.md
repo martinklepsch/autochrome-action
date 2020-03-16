@@ -1,21 +1,30 @@
-# Clojure Lint Action (using clj-kondo)
+# Clojure Diff Action (using [autochrome](https://github.com/ladderlife/autochrome))
 
-Run clj-kondo and annotate source code changes with results.
+Runs autochrome on PR diffs and adds a comment to the PR with a link to the structurual diff created by autochrome.
+
+- Currently this relies on an external service that stores and serves the resulting diff (HTML file). This service is maintained as a Firebase function in `functions/`.
+- :warn: Because this service stores diffs in a publicly readable way (if you know the URL) it is probably best not to use this action with proprietary code.
+
+### Things that could be improved
+
+- Update the PR description with a link to the diff instead of adding comment add the end of the PR thread.
+- Adjust the design of autochrome's diffs to be less different to GitHub's diffs.
+- Potentially ignore non-Clojure code in autochrome diffs.
+- 
 
 # Usage
 
 ```yaml
     steps:
-    - uses: actions/checkout@v1
-    - uses: DeLaGuardo/clojure-lint-action@v1
-      with:
-        clj-kondo-args: --lint src
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0       # <<< important
+      - name: Run Autochrome
+        uses: martinklepsch/autochrome-action@autochrome-action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
-
-![Annotation example](images/annotation.png)
-
-![Check Run example](images/check-run.png)
 
 # License
 
