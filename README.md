@@ -4,6 +4,7 @@ Runs autochrome on PR diffs and adds a comment to the PR with a link to the stru
 
 - Currently this relies on an external service that stores and serves the resulting diff (HTML file). This service is maintained as a Firebase function in `functions/`.
 - :warn: Because this service stores diffs in a publicly readable way (if you know the URL) it is probably best not to use this action with proprietary code.
+- A minimal example PR can be found here: https://github.com/martinklepsch/autochrome-action/pull/2
 
 ### Things that could be improved
 
