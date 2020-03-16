@@ -25,6 +25,7 @@
          json/read-str
          (map (fn [p]
                 {:id (get p "id")
+                 :number (get p "number")
                  :base (get-in p ["base" "sha"])
                  :head (get-in p ["head" "sha"])}))))
 
@@ -94,9 +95,9 @@
     (let [diff (autochrome/local-diff (:base p) (:head p))
           diff-uri (save-diff! diff)]
       (println "Diff stored at:" diff-uri)
-      (-> (get-comments repo (:id p))
+      (-> (get-comments repo (:number p))
           (delete-own-comments))
-      (prn (add-comment repo (:id p) diff-uri)))))
+      (prn (add-comment repo (:number p) diff-uri)))))
 
 (comment
   (hc/delete "https://api.github.com/repos/martinklepsch/autochrome-action/issues/comments/590096341"
