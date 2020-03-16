@@ -85,8 +85,8 @@
     (hc/delete url {:headers headers})))
 
 (let [dir (first *command-line-args*)
-      repo (or (System/getenv "GITHUB_REPOSITORY") "martinklepsch/autochrome-action")
-      branch (or (System/getenv "GITHUB_REF") "autochrome-action")
+      repo (System/getenv "GITHUB_REPOSITORY")
+      branch (System/getenv "GITHUB_REF")
       [p] (prs-for-branch repo branch)]
   (prn "repo" repo)
   (prn "branch" branch)
