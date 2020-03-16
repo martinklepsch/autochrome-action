@@ -1,9 +1,6 @@
 name: Autochrome
 
-on:
-  push:
-    branches:
-      - autochrome-action
+on: push
 
 jobs:
   autochrome:
