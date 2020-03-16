@@ -62,11 +62,11 @@
                                                   :annotation_level "notice"
                                                   :message (str  "View the structural diff for this PR here: " "https://storage.cloud.google.com/autochrome-service.appspot.com/diffs/YFezJQnU0qp860E08lK-I.html")}]}})})))
 
-(defn add-comment [repo pr-id]
+(defn add-comment [repo pr-id diff-url]
   (-> (hc/post (str "https://api.github.com/repos/" repo "/issues/" pr-id "/comments")
                {:headers headers
                 :body (json/write-str
-                        {:body (str  "View the structural diff for this PR here: " "https://storage.cloud.google.com/autochrome-service.appspot.com/diffs/YFezJQnU0qp860E08lK-I.html")})})
+                        {:body (str  "View the structural diff for this PR here: " diff-url)})})
       :body
       json/read-str
       #_(get "id")))
@@ -83,26 +83,20 @@
   (doseq [{:strs [url]} (filter #(= autochrome-user-id (get-in % ["user" "id"])) comments)]
     (hc/delete url {:headers headers})))
 
-(println "ARGS" *command-line-args*)
-(def dir (first *command-line-args*))
-(let [[p] (prs-for-branch (or (System/getenv "GITHUB_REPOSITORY")
-                              "martinklepsch/autochrome-action")
-                          "autochrome-action")]
+(let [dir (first *command-line-args*)
+      repo (or (System/getenv "GITHUB_REPOSITORY") "martinklepsch/autochrome-action")
+      branch (or (System/getenv "GITHUB_REF") "autochrome-action")
+      [p] (prs-for-branch repo branch)]
+  (prn "repo" repo)
+  (prn "branch" branch)
   (prn "PR" p)
-  (prn (sh/sh "ls" :dir dir))
-  ; (prn (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir))
-  ; (prn (->>
-  ;        (-> (sh/sh "git" "ls-tree" "-r" (:head p) :dir dir)
-  ;            :out
-  ;            (clojure.string/split #"\s"))
-  ;        (partition 4)
-  ;        (map (juxt #(nth % 3) #(nth % 2)))
-  ;        (into {})))
   (binding [autochrome-gh/*git-dir* dir]
-    (prn :git-dir autochrome-gh/*git-dir*)
-    (let [diff (autochrome/local-diff (:base p) (:head p))]
-      (prn :diff diff)
-      (prn :diff-saved (save-diff! diff)))))
+    (let [diff (autochrome/local-diff (:base p) (:head p))
+          diff-uri (save-diff! diff)]
+      (println "Diff stored at:" diff-uri)
+      (-> (get-comments repo (:id p))
+          (delete-own-comments))
+      (prn (add-comment repo (:id p) diff-uri)))))
 
 (comment
   (hc/delete "https://api.github.com/repos/martinklepsch/autochrome-action/issues/comments/590096341"
