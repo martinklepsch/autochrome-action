@@ -21,7 +21,7 @@ Runs autochrome on PR diffs and adds a comment to the PR with a link to the stru
         with:
           fetch-depth: 0       # <<< important
       - name: Run Autochrome
-        uses: martinklepsch/autochrome-action@autochrome-action
+        uses: martinklepsch/autochrome-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
