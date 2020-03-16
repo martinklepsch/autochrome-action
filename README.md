@@ -10,7 +10,7 @@ Runs autochrome on PR diffs and adds a comment to the PR with a link to the stru
 - Update the PR description with a link to the diff instead of adding comment add the end of the PR thread.
 - Adjust the design of autochrome's diffs to be less different to GitHub's diffs.
 - Potentially ignore non-Clojure code in autochrome diffs.
-- 
+- More? [Open an issue!](https://github.com/martinklepsch/autochrome-action/issues/new)
 
 # Usage
 
