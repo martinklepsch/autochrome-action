@@ -17,7 +17,7 @@
     "express-multipart-file-parser": "^0.1.2",
     "firebase-admin": "^8.6.0",
     "firebase-functions": "^3.3.0",
-    "nanoid": "^2.1.11",
+    "nanoid": "^3.1.31",
     "temp-write": "^4.0.0"
   },
   "devDependencies": {
